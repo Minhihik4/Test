@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin sinh viên</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Thông tin sinh viên</h1>
+        
+        <div class="form-wrapper">
+            <!-- Phần upload ảnh bên trái -->
+            <div class="avatar-section">
+                <div class="avatar-upload">
+                    <label for="avatar"></label>
+                    <div class="avatar-preview" id="avatarPreview"></div>
+                    <input type="file" id="avatar" name="avatar" accept="image/*">
+                </div>
+            </div>
+            
+            <!-- Phần form thông tin bên phải -->
+            <div class="info-section">
+                <form id="studentForm">
+                    <div class="form-container"> <!-- Thêm container cho form -->
+                        <!-- Các form-row giữ nguyên -->
+                    </div>
+                </form>
+                <form id="studentForm">
+                    <div class="form-row">
+                        <label for="fullName">Họ tên:</label>
+                        <input type="text" id="fullName" name="fullName">
+                        <div class="error-message" id="fullNameError"></div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="studentId">Mã số sinh viên:</label>
+                        <input type="text" id="studentId" name="studentId">
+                        <div class="error-message" id="studentIdError"></div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label>Giới tính:</label>
+                        <div class="radio-group">
+                            <input type="radio" id="male" name="gender" value="Nam">
+                            <label for="male">Nam</label>
+                            <input type="radio" id="female" name="gender" value="Nữ">
+                            <label for="female">Nữ</label>
+                        </div>
+                        <div class="error-message" id="genderError"></div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="major">Ngành học:</label>
+                        <select id="major" name="major">
+                            <option value="">-- Chọn ngành --</option>
+                            <option value="Công nghệ thông tin">Công nghệ thông tin</option>
+                            <option value="Khoa học dữ liệu">Khoa học dữ liệu</option>
+                            <option value="An toàn thông tin">An toàn thông tin</option>
+                        </select>
+                        <div class="error-message" id="majorError"></div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email">
+                        <div class="error-message" id="emailError"></div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="phone">Số điện thoại:</label>
+                        <input type="text" id="phone" name="phone">
+                        <div class="error-message" id="phoneError"></div>
+                    <!-- Thay thế button cũ -->
+                    <div class="button-group">
+                        <button type="submit" id="submitBtn">Submit</button>
+                        <button type="reset" id="resetBtn">Reset</button>
+                    </div>
+<div id="successMessage" class="success-message"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
